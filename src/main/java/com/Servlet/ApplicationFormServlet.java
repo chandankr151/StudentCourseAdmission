@@ -1,24 +1,29 @@
 package com.Servlet;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
 import jakarta.servlet.ServletException;
-//import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
-
+@MultipartConfig
+@WebServlet("/")
 public class ApplicationFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public ApplicationFormServlet() {
-        super();
-    }
+	public ApplicationFormServlet() {
+		super();
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -38,22 +43,41 @@ public class ApplicationFormServlet extends HttpServlet {
 		sub4 = request.getParameter("sub4");
 		sub5 = request.getParameter("sub5");
 
-//		System.out.println("name: " + name);
+		System.out.println("name: " + name);
 		System.out.println("caste: " + caste);
-//		System.out.println("Subject1: " + sub1);
-//		System.out.println("Subject2: " + sub2);
-//		System.out.println("Subject3: " + sub3);
-//		System.out.println("Subject4: " + sub4);
-//		System.out.println("Subject5: " + sub5);
+		System.out.println("Subject1: " + sub1);
+		System.out.println("Subject2: " + sub2);
+		System.out.println("Subject3: " + sub3);
+		System.out.println("Subject4: " + sub4);
+		System.out.println("Subject5: " + sub5);
 
 		if (!caste.equals("gen")) {
-			// Get the file part from request 
+			// Get the file part from request
 			Part filePart = request.getPart("files");
 
 			String fileName = filePart.getSubmittedFileName();
 			cert_name = fileName;
-			for (Part part : request.getParts()) {
-				part.write("E:\\SpringFrameworkDurgesh\\SessionLoginProj\\src\\main\\webapp\\document\\" + fileName);
+
+			String currentFolder = "E:\\SpringFrameworkDurgesh\\SessionLoginProj\\src\\main\\webapp\\document\\";
+			String uploadFolder = currentFolder;
+
+			File folder = new File(uploadFolder);
+			if (!folder.exists()) {
+				folder.mkdirs();
+			}
+
+			try (InputStream input = filePart.getInputStream();
+					OutputStream output = new FileOutputStream(new File(uploadFolder, fileName))) {
+
+				byte[] buffer = new byte[1024];
+				int bytesRead;
+
+				while ((bytesRead = input.read(buffer)) != -1) {
+					output.write(buffer, 0, bytesRead);
+				}
+				System.out.println("file uploaded." + uploadFolder);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 

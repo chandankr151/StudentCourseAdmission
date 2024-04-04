@@ -29,22 +29,19 @@ hr{
 	width: 100%;
 	color: red;
 }
-input, select, button{
+input, select {
 
 	width: 260px;
 	border-radius: 10px;
 	border-color: pink;
 	padding-left: 10px;
-	padding-top: 10px;
+
 	padding-right: 10px;
-	padding-bottom: 10px;
+
 	color: red;
 }
 #btn {
-	width: 360px;
 	margin-left: 100px;
-	margin-top: 20px;
-	margin-bottom: 30px;
 	width:150px;
 	border-radius: 20px;
 	border-color: pink;

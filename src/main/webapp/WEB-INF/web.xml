@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="https://jakarta.ee/xml/ns/jakartaee" 
-	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
-	https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  <display-name>SessionLoginProj</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>StudentCourseAdmisionWebApplication</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -28,14 +24,11 @@
     <display-name>ApplicationFormServlet</display-name>
     <servlet-name>ApplicationFormServlet</servlet-name>
     <servlet-class>com.Servlet.ApplicationFormServlet</servlet-class>
-    
-        <multipart-config>
-            <!-- Configure max file size, location, etc. -->
-            <max-file-size>20848820</max-file-size> <!-- Max file size in bytes (20MB) -->
-            <max-request-size>418018841</max-request-size> <!-- Max request size in bytes (40MB) -->
-            <file-size-threshold>1048576</file-size-threshold> <!-- Threshold size before writing to disk (1MB) -->
-        </multipart-config>
-    
+    <multipart-config>
+      <max-file-size>20848820</max-file-size>
+      <max-request-size>418018841</max-request-size>
+      <file-size-threshold>1048576</file-size-threshold>
+    </multipart-config>
   </servlet>
   <servlet-mapping>
     <servlet-name>ApplicationFormServlet</servlet-name>

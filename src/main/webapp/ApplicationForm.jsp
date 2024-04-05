@@ -11,6 +11,72 @@
 <title>Application form</title>
 
 <script type="text/javascript"><%@include file="/JS/script.js" %></script>
+
+<style>
+	body {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+form {
+    display: inline-block;
+    margin-top: 40px;
+    width: 520px;
+	height: 100%;
+	border: 1px solid #FBFCFC;
+	box-shadow: 6px 6px 6px 6px #ffe6e6;
+	border-radius: 15px;
+}
+
+form:hover{
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  transform: translateY(-5px);
+}
+
+h1 {
+	text-align: center;
+}
+hr{
+	width: 100%;
+	color: red;
+}
+input, select {
+
+	width: 260px;
+	border-radius: 10px;
+	border-color: pink;
+	padding-left: 10px;
+
+	padding-right: 10px;
+	height: 30px;
+	width: 250px;
+	color: red;
+}
+#btn {
+	margin-left: 100px;
+	width:150px;
+	border-radius: 20px;
+	border-color: pink;
+}
+div{
+	height: 100%;
+}
+table{
+	margin-top: 10px;
+}
+tr,td{
+padding-bottom: 5px;
+padding-top: 5px;
+}
+input{
+	margin-left: 10px;
+}
+h1{
+	margin-top: 25px;
+}
+</style>
 </head>
 
 <body onload="startTimer();" onclick="clearLockTimer();">

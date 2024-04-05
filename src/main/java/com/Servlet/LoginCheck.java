@@ -12,7 +12,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
 public class LoginCheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -75,13 +74,11 @@ public class LoginCheck extends HttpServlet {
 	}
 }
 
-
 /*
  * System.out.println(userid); System.out.println(pass);
  */
-/*out.println("<html>");
-out.println("<head>");
-out.println("</head>");
-out.println("<body>");
-out.println("<h1>Login Successfully</h1>");
-out.println("</body></htm>");*/
+/*
+ * out.println("<html>"); out.println("<head>"); out.println("</head>");
+ * out.println("<body>"); out.println("<h1>Login Successfully</h1>");
+ * out.println("</body></htm>");
+ */

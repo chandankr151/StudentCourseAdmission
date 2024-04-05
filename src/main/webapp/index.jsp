@@ -27,8 +27,69 @@
 	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 	crossorigin="anonymous" type="text/javascript"></script>
 
-<link rel="stylesheet" href="css/styleLogin.css" />
+<style type="text/css">
+body {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+form {
+    display: inline-block;
+    margin-top: 120px;
+    width: 520px;
+	height: 430px;
+	border: 1px solid #FBFCFC;
+	box-shadow: 6px 6px 6px 6px #ffe6e6;
+	border-radius: 15px;
+}
 
+form:hover{
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+h1 {
+	text-align: center;
+}
+hr{
+	width: 100%;
+	color: red;
+}
+input{
+	width:250px;
+	height: 35px;
+	border-radius: 10px;
+	border-color: pink;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	color: red;
+}
+#btn {
+	margin-left: 100px;
+	margin-top: 20px;
+	width:150px;
+	border-radius: 10px;
+	border-color: pink;
+}
+
+table{
+	margin-top: 60px;
+}
+tr,td{
+
+padding-top: 15px;
+}
+input{
+	margin-left: 10px;
+}
+h1{
+	margin-top: 40px;
+}
+
+</style>
 </head>
 <body>
 	<div>
